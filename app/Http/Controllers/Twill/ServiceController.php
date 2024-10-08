@@ -11,9 +11,9 @@ use A17\Twill\Services\Forms\Fields\Input;
 use A17\Twill\Services\Forms\Form;
 use A17\Twill\Http\Controllers\Admin\NestedModuleController as BaseModuleController;
 
-class PageController extends BaseModuleController
+class ServiceController extends BaseModuleController
 {
-    protected $moduleName = 'pages';
+    protected $moduleName = 'services';
     protected $showOnlyParentItemsInBrowsers = true;
     protected $nestedItemsDepth = 1;
     /**
@@ -35,7 +35,6 @@ class PageController extends BaseModuleController
         $form->add(
             Input::make()->name('description')->label('Description')->translatable()
         );
-
         $form->add(
             Medias::make()->name('cover')->label('Cover Image')
         );
